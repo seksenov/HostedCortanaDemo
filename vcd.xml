@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="CortanaDemo">
+    <CommandPrefix>Cortana Demo</CommandPrefix>
+    <Example>Cortana demo send this is a test</Example>
+    <Command Name="send">
+      <Example>send {message} using cortana demo</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">send message {messageSubject}</ListenFor>
+      <Feedback>sending {messageSubject} to Cortana Demo</Feedback>
+      <Navigate Target="/sendMessage.htm"/>
+    </Command>
+    <PhraseTopic Label="messageSubject" Scenario="Dictation"></PhraseTopic>
+  </CommandSet>
+</VoiceCommands>
