@@ -16,6 +16,9 @@ if (typeof Windows !== "undefined") {
       var command = speechRecognitionResult.rulePath[0];
 
       console.log("The command is: " + command);
+      document.getElementById('command').innerHTML = command;
+      document.getElementById('speechReco').innerHTML = speechRecognitionResult;
+      document.getElementById('text').innerHTML = textSpoken;
 
       // Determine the command type {play} defined in vcd
       if (command === "send") {
