@@ -5,7 +5,7 @@
     <Example>Amazon Demo search for nike shoes</Example>
     <Command Name="search">
       <Example>search for {message} using amazon demo</Example>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase">serch for {messageSubject}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">{messageSubject}</ListenFor>
       <Feedback>Searching Amazon Demo for {messageSubject}</Feedback>
       <Navigate Target="/search.htm"/>
     </Command>
